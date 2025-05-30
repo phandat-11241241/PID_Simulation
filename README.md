@@ -1,21 +1,19 @@
 ## Description
 
-Chương trình mô phỏng quá trình **điều khiển quay một vệ tinh quanh một trục (1 DOF)** dưới ảnh hưởng của moment quán tính và moment phản lực từ **bánh xe phản lực (reaction wheel)** .
+Chương trình mô phỏng quá trình **điều khiển quay một vệ tinh quanh một trục (1 DOF)** dưới ảnh hưởng của moment quán tính và moment phản lực từ reaction wheel.
 
 **Mục tiêu của mô hình hoá**:
 
-- Thể hiện quá trình quay của vệ tinh thông qua **moment phản lực sinh ra từ bánh xe**
-- Áp dụng **điều khiển PID** để điều chỉnh hướng quay vệ tinh đến đúng **góc mục tiêu (target angle)**
+- Thể hiện quá trình quay của vệ tinh dưới ảnh hưởng của **moment phản lực sinh ra từ reaction wheel**
+- Áp dụng **điều khiển PID** để điều chỉnh hướng quay vệ tinh đến đúng **góc mục tiêu**
 - Mô phỏng ảnh hưởng của:
   - Moment quán tính của vệ tinh (`I_planet`)
   - Moment quán tính của bánh xe (`I_wheel`)
   - Tham số điều khiển PID (`Kp`, `Ki`, `Kd`)
-- Hiển thị các thông số vật lý theo thời gian:
+- Hiển thị các thông số vật lý theo thời gian dưới dạng biểu đồ:
   - Góc quay của vệ tinh
   - Vận tốc quay của vệ tinh và bánh xe
   - Moment lực điều khiển
-- Tất cả quá trình được thực hiện trong môi trường mô phỏng rời rạc theo bước thời gian `dt`, và kết quả được trực quan hóa bằng biểu đồ.
-
 ## Các bước thực hiện mô phỏng
 
 ### 1. Tính moment điều khiển (τ)
