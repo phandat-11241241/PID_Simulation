@@ -16,7 +16,7 @@ Chương trình mô phỏng quá trình **điều khiển quay một vệ tinh q
   - Moment lực điều khiển
 - Tất cả quá trình được thực hiện trong môi trường mô phỏng rời rạc theo bước thời gian `dt`, và kết quả được trực quan hóa bằng biểu đồ.
 
-## 🚀 Các bước thực hiện mô phỏng
+## Các bước thực hiện mô phỏng
 
 ### 1. Tính moment điều khiển (τ)
 Từ sai số giữa góc quay hiện tại và góc mục tiêu, bộ điều khiển PID tính được moment lực τ cần thiết để điều chỉnh reaction wheel tại mỗi bước thời gian `dt`.
@@ -35,5 +35,5 @@ Từ moment lực τ, tính được:
 → Vận tốc góc vệ tinh: ω_planet(t + Δt) = ω_planet(t) + α_planet·dt
 
  ### 4. Hiển thị đồ thị của các trạng thái của vệ tinh và reaction wheel tại các khoảng thời gian
- 
-
+## Kết quả mô phỏng PID
+![Kết quả mô phỏng](https://github.com/phandat-11241241/PID_Simulation/blob/master/Report.png?raw=true)
