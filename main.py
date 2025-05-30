@@ -22,6 +22,7 @@ time = np.arange(0, t_end, dt)
 
 # Góc mục tiêu
 target_angle = float(input("Nhập góc mục tiêu: "))
+target_angle_1 = target_angle 
 target_angle = np.deg2rad(target_angle) 
 
 # Trạng thái ban đầu
@@ -53,14 +54,15 @@ for t in time:
     omega_wheel_list.append(np.rad2deg(omega_wheel))
     tau_list.append(tau)
 
-    # Cập nhật sai số cũ
+    # Cập nhật sai số 
     pre_error = error
-    if angle_planet == target_angle:
-        print(t)
-
-
-plt.figure(figsize=(12, 8))
-
+Input_data = (
+    f"I_planet = {I_planet}, I_wheel = {I_wheel}  |  "
+    "Thông số hiệu chỉnh PID: " + f"Kp = {Kp}, Ki = {Ki}, Kd = {Kd}  |  "
+    f"Target angle = {target_angle_1} deg"
+) 
+plt.figure(figsize=(14, 8))
+plt.suptitle("Mô phỏng PID điều khiển vệ tinh\n" + Input_data , fontsize=15)
 plt.subplot(3, 1, 1)
 plt.plot(time, angle_planet_list)
 plt.ylabel("Góc vệ tinh (deg)")
